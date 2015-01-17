@@ -1,0 +1,22 @@
+{
+    "name": "jqm-extended-collapsible",
+    "version": "0.0.1",
+
+    "main": [
+        "dist/jqm.extended.collapsible.js",
+        "dist/jqm.extended.collapsible.min.js",
+        "dist/jqm.extended.collapsible.css",
+        "dist/jqm.extended.collapsible.min.css"
+    ],
+
+    "ignore": [
+        "demo",
+        "css",
+        "js",
+        "node_modules",
+        ".gitignore",
+        "README.md",
+        "package.json",
+        "gulpfile.js"
+    ]
+}
