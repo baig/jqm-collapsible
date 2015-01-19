@@ -1,7 +1,0 @@
-/* Collapsible CSS Patch */
-.ui-collapsible-heading.ui-header,
-.ui-collapsible-heading.ui-header > .ui-btn {
-    cursor: pointer;
-    -webkit-border-radius: .3125em;
-    border-radius: .3125em;
-}
