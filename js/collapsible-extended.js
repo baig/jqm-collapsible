@@ -1,5 +1,9 @@
-(function ($, undefined) {
+/*global jQuery: true */
+/*jslint nomen: true */
 
+(function ($, undefined) {
+    "use strict";
+    
     var optHeading = $.mobile.collapsible.prototype.options.heading;
 
     $.widget("mobile.collapsible", $.mobile.collapsible, {
@@ -32,18 +36,18 @@
 
             ui.heading.on("flipswitchcreate", function () {
                 // aligning flipswitches to the right after initialization
-                ui.heading.find(".ui-flipswitch").addClass('ui-btn-right')
+                ui.heading.find(".ui-flipswitch").addClass('ui-btn-right');
             });
 
             // setting controlgroup divs' margin to 0 
             ui.heading
                 .children()
                 .find(":jqmData(role='controlgroup')")
-                .css('margin', '0')
+                .css('margin', '0');
 
             return ui;
-        },
+        }
 
     });
 
-})(jQuery);
+}(jQuery));
