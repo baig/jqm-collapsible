@@ -46,7 +46,7 @@ gulp.task("concat:js", 'Joins (concatenates) all JS files into a single file and
 
 gulp.task("concat:css", 'Joins (concatenates) all CSS files into a single file and puts it in the dist/ folder.', [], function () {
     "use strict";
-    return gulp.src(['css/**/*.css'])
+    return gulp.src(['css/**/jquery.mobile.collapsible.css'])
                .pipe(concat('jqm.extended.collapsible.css'))
                .pipe(gulp.dest(DIST_PATH));
 });
@@ -59,7 +59,7 @@ gulp.task("minify",
 
 gulp.task("minify:js", 'Minifies all JS files.', ['concat:js'], function () {
     "use strict";
-    return gulp.src(['dist/*.js'])
+    return gulp.src(['dist/jqm.extended.collapsible.js'])
               .pipe(uglify(UGLIFY_OPTIONS))
               .pipe(rename(MIN_JS_NAME))
               .pipe(gulp.dest(DIST_PATH));

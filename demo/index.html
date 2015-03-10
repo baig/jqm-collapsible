@@ -8,10 +8,12 @@
 	
 	<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.css" />
 	<link rel="stylesheet" href="../css/jquery.mobile.collapsible.css">
+	<link rel="stylesheet" href="../css/demo.css">
 	
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.3/jquery.mobile.min.js"></script>
 	<script src="../js/collapsible-extended.js"></script>
+<!--	<script src="../js/collapsible.js"></script>-->
 </head>
 
 <body>
@@ -32,10 +34,58 @@
         
         <p>Extended Collapsible's header can have button and it lets you customize the position of the header title.</p>
         <div data-role="collapsible" data-collapsed="false">
-            <div data-role="header">
-                <h1>Page Title</h1>
-                <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-btn-icon-right ui-icon-gear">Options</a>
-            </div>
+            <h1>
+                Page Title
+                <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-btn-icon-right ui-icon-gear ui-mini">Options</a>
+            </h1>
+            <ul data-role="listview">
+                <li><a href="#">List item 1</a></li>
+                <li><a href="#">List item 2</a></li>
+                <li><a href="#">List item 3</a></li>
+            </ul>
+        </div>
+        
+        <br>
+        
+        <p>Extended Collapsible's header can have button and it lets you customize the position of the header title.</p>
+        <div data-role="collapsible" data-collapsed="false">
+            <h1>
+                Page Title
+                <button class="ui-btn ui-btn-inline ui-btn-right ui-mini">Hello</button>
+            </h1>
+            <ul data-role="listview">
+                <li><a href="#">List item 1</a></li>
+                <li><a href="#">List item 2</a></li>
+                <li><a href="#">List item 3</a></li>
+            </ul>
+        </div>
+        
+        <br>
+        
+        <p>Extended Collapsible's header can have button and it lets you customize the position of the header title.</p>
+        <div data-role="collapsible" data-collapsed="false">
+            <h1>
+                Page Title
+                <select name="flip-3" id="flip-3" data-role="flipswitch" data-mini="true">
+                    <option value="off">Off</option>
+                    <option value="on">On</option>
+                </select>
+            </h1>
+            <ul data-role="listview">
+                <li><a href="#">List item 1</a></li>
+                <li><a href="#">List item 2</a></li>
+                <li><a href="#">List item 3</a></li>
+            </ul>
+        </div>
+        
+        <br>
+        
+        <p>Extended Collapsible's header can have button and it lets you customize the position of the header title.</p>
+        <div data-role="collapsible" data-collapsed="false">
+            <h1>
+                Page Title
+                <input type="checkbox" data-role="flipswitch" name="flip-checkbox-3" id="flip-checkbox-3" data-mini="true" data-on-text="Assured" data-off-text="Uncertain" data-wrapper-class="custom-size-flipswitch">
+            </h1>
             <ul data-role="listview">
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
@@ -47,30 +97,62 @@
         
         <p>A more complex button configuration in Extended Collapsible's header.</p>
         <div data-role="collapsible" data-collapsed="false">
-            <div data-role="header">
+            <h1>
                 <a href="#" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-delete">Cancel</a>
-                <h1>My App</h1>
+                My App
                 <button class="ui-btn-right ui-btn ui-btn-b ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-check">Save</button>
-            </div>
+            </h1>
             <ul data-role="listview">
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
                 <li><a href="#">List item 3</a></li>
             </ul>
+        </div>
+        
+        <br>
+        
+        <div data-role="collapsibleset" data-theme="a" data-content-theme="a">
+            <div data-role="collapsible">
+                <h3>Section 1
+                    <a href="#" class="ui-btn-right ui-btn ui-btn-inline ui-corner-all ui-btn-icon-right ui-icon-gear ui-mini">Options</a>
+                </h3>
+            <p>I'm the collapsible content for section 1</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Section 2
+                    <button class="ui-btn ui-btn-inline ui-btn-right ui-mini">Hello</button>
+                </h3>
+            <p>I'm the collapsible content for section 2</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Section 3
+                    <input type="checkbox" data-role="flipswitch" name="flip-checkbox-3" id="flip-checkbox-3" data-mini="true" data-on-text="On" data-off-text="Off" data-wrapper-class="custom-size-flipswitch">
+                </h3>
+            <p>I'm the collapsible content for section 3</p>
+            </div>
+            <div data-role="collapsible">
+                <h3>Section 4
+                    <div data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-btn-right">
+                        <a href="#" class="ui-btn ui-btn-icon-right ui-icon-plus">Add</a>
+                        <a href="#" class="ui-btn ui-btn-icon-right ui-icon-arrow-u">Up</a>
+                        <a href="#" class="ui-btn ui-btn-icon-right ui-icon-arrow-d">Down</a>
+                    </div>
+                </h3>
+            <p>I'm the collapsible content for section 4</p>
+            </div>
         </div>
         
         <br>
         
         <p>Buttons inside horizontal controlgroup in Extended Collapsible's header.</p>
-        <div data-role="collapsible" data-collapsed="false" data-mini="true">
-            <div data-role="header">
-                <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left">
+        <div data-role="collapsible" data-collapsed="false">
+            <h6>My header
+                <div data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-btn-left">
                     <a href="#" class="ui-btn ui-btn-icon-right ui-icon-plus">Add</a>
                     <a href="#" class="ui-btn ui-btn-icon-right ui-icon-arrow-u">Up</a>
                     <a href="#" class="ui-btn ui-btn-icon-right ui-icon-arrow-d">Down</a>
                 </div>
-                <h6>My header</h6>
-            </div>
+            </h6>
             <ul data-role="listview">
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
@@ -80,15 +162,14 @@
         
         <br>
         
-        <div data-role="collapsible" data-collapsed="false" data-mini="true">
-            <div data-role="header">
-                <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
+        <div data-role="collapsible" data-collapsed="false">
+            <h6>My header
+                <div data-role="controlgroup" data-type="horizontal" data-mini="true" class="ui-btn-right">
                     <a href="#" class="ui-btn ui-btn-icon-right ui-icon-plus">Add</a>
                     <a href="#" class="ui-btn ui-btn-icon-right ui-icon-arrow-u">Up</a>
                     <a href="#" class="ui-btn ui-btn-icon-right ui-icon-arrow-d">Down</a>
                 </div>
-                <h6>My header</h6>
-            </div>
+            </h6>
             <ul data-role="listview">
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
@@ -98,18 +179,17 @@
         
         <br>
         
-        <div data-role="collapsible" data-collapsed="false" data-mini="true">
-            <div data-role="header">
+        <div data-role="collapsible" data-collapsed="false">
+            <h6>My header
                 <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left">
                     <a href="#" class="ui-btn">Add</a>
                     <a href="#" class="ui-btn">Up</a>
                 </div>
-                <h6>My header</h6>
                 <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
                     <a href="#" class="ui-btn">Up</a>
                     <a href="#" class="ui-btn">Add</a>
                 </div>
-            </div>
+            </h6>
             <ul data-role="listview">
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
@@ -119,18 +199,18 @@
         
         <br>
         
-        <div data-role="collapsible" data-collapsed="false" data-mini="true">
-            <div data-role="header">
+        <div data-role="collapsible" data-collapsed="false">
+            <h6>
                 <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-left">
                     <a href="#" class="ui-btn ui-btn-icon-notext ui-btn-icon-right ui-icon-plus">Add</a>
                     <a href="#" class="ui-btn ui-btn-icon-notext ui-btn-icon-right ui-icon-arrow-u">Up</a>
                 </div>
-                <h6>My header</h6>
+                My header
                 <div data-role="controlgroup" data-type="horizontal" class="ui-mini ui-btn-right">
                     <a href="#" class="ui-btn ui-btn-icon-notext ui-btn-icon-right ui-icon-arrow-u">Up</a>
                     <a href="#" class="ui-btn ui-btn-icon-notext ui-btn-icon-right ui-icon-plus">Add</a>
                 </div>
-            </div>
+            </h6>
             <ul data-role="listview">
                 <li><a href="#">List item 1</a></li>
                 <li><a href="#">List item 2</a></li>
