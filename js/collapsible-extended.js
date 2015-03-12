@@ -7,27 +7,43 @@
     var optHeading = $.mobile.collapsible.prototype.options.heading;
 
     $.widget("mobile.collapsible", $.mobile.collapsible, {
+        
+        _clickHandler: null,
+        _tapHandler: null,
 
         _create: function () {
             // calling parent's ``_create` method
             this._super();
 
             var ui = this._ui;
+            
+            // saving the existing `click` and `tap` event handlers
+            var evt = $._data(ui.heading[0], "events");
+            this._clickHandler = evt.click[0].handler;
+            this._tapHandler = evt.tap[0].handler
 
-            // removing existing click handler from the heading
-            this._off(ui.heading, "click");
+            // removing existing `click handler from the heading
+            this._off(ui.heading, "click tap");
 
             // attaching click handler only on the heading
-            this._on(ui.heading, {
-                "click": function (event) {
-                    var $target = $(event.target);
-                    if ($target.hasClass("ui-collapsible-heading") || $target.hasClass("ui-collapsible-heading-toggle") || $target.attr("role") === "heading") {
-                        this._handleExpandCollapse(!ui.heading.hasClass("ui-collapsible-heading-collapsed"));
-                    }
-                    event.preventDefault();
-                    event.stopPropagation();
-                }
+            this._on( ui.heading, {
+                "click": "_handleTapOrClick",
+                "tap": "_handleTapOrClick",
             });
+        },
+    
+        _handleTapOrClick: function(e) {
+            var $target = $(e.target);
+            if ($target.hasClass("ui-collapsible-heading") || $target.hasClass("ui-collapsible-heading-toggle")) {
+                switch (e.type) {
+                    case "click":
+                        this._clickHandler(e)
+                        break;
+                    case "tap":
+                        this._tapHandler(e);
+                        break;
+                }
+            }
         },
 
         _enhance: function (elem, ui) {
