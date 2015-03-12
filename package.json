@@ -1,6 +1,6 @@
 {
   "name": "jqm-extended-collapsible",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "An extended version of jQuery Mobile Collapsible Widget that supports insertion of new list items and removal of existing list items",
   "main": "js/collapsible-extended.js",
   "repository": {
